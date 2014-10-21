@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>系统管理--权限管理</title>
+<style>
+body {
+	background-color: #F1F6FC;
+	margin-left: 10px;
+	margin-top: 0px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="TaskInfo/ajaxtabs/ajaxtabs.css" />
+<script type="text/javascript" src="TaskInfo/ajaxtabs/ajaxtabs.js">
+</script>
+
+<link href="../../../css/list.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<script language="JavaScript" type="text/JavaScript">
+//复选
+function selectAll(chk)
+{  
+var chk = document.form1.chkAll.checked;
+for (i=0;i<document.all.length;i++) {
+if (document.all[i].name=="id[]") {
+document.all[i].checked=chk;
+chkRow(document.all[i]);
+}}}
+
+
+//复选后单元格变色
+function chkRow(obj){
+var r = obj.parentElement.parentElement;
+if(obj.checked){ r.style.backgroundColor="#E6E9F2";}
+else {if(r.rowIndex%2==1)r.style.backgroundColor="";else r.style.backgroundColor="#F5F5F5";}
+}
+</script>
+<script>
+function orgSelect() {
+     var url = "新建.html";
+     window.showModalDialog(url,self,"dialogHeight:600px; dialogWidth:900px");
+  }
+  // JavaScript Document
+function selectTag(showContent,selfObj){
+	// 操作标签
+	var tag = document.getElementById("tags").getElementsByTagName("li");
+	var taglength = tag.length;
+	for(i=0; i<taglength; i++){
+		tag[i].className = "";
+	}
+	selfObj.parentNode.className = "selectTag";
+	// 操作内容
+	for(i=0; j=document.getElementById("tagContent"+i); i++){
+		j.style.display = "none";
+	}
+	document.getElementById(showContent).style.display = "block";
+	
+	
+}
+</script>
+<div class="top_nav">您现在的位置是： 工作管理 &gt;&gt; 通知管理</div>
+<div class="top_find">
+  <table width="100%" border="0" cellpadding="5">
+    <tr>
+      <td width="83%" align="left">人员名称：
+        <input name="textfield22222" type="text" class="input_title"size="25" />
+       
+      <input name="Submit32" type="submit" class="button" value="查询" />
+	  <input name="Submit32" type="submit" class="button" value="新建通知" /></td>
+    </tr>
+  </table>
+</div>
+
+
+  <DIV id="con">
+    <UL id="tags">
+      <LI  class="selectTag"><A onClick="selectTag('tagContent0',this)" href="javascript:void(0)">待办通知</A> </LI>
+      <LI><A onClick="selectTag('tagContent1',this)"  href="javascript:void(0)">已办通知</A> </LI>
+    </UL>
+    <DIV id="tagContent">
+      <DIV class="tagContent selectTag" id="tagContent0">
+        <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#98A5D4">
+            <tr class="td_hed">
+            <td width="28"><input type="checkbox" name="checkbox8" value="checkbox"  onClick="selectAll()"></td>
+            <td width="38" >操作</td>
+            <td width="111" >通知名称</td>
+			<td width="60" >发起人</td>
+			<td width="80" >发起时间</td>
+			<td width="80" >到期时间</td>
+			<td width="300" >接收人</td>
+          </tr>
+          <tr bgcolor="#FFFFFF">
+            <td align="center" >
+			  <input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />
+            </td>
+            <td ><div align="center"><a href="" onclick="javascript:orgSelect()"><img src="../../../images/alter.gif" alt="修改" width="15" height="16" border="0" /></a></div></td>
+            <td ><a href="查看.html">青果项目结项</a></td>
+			<td >李子</td>
+			<td >2014-05-22 10:30:21</td>
+			<td >2014-05-26</td>
+			<td >李冰、张飞、罗纹、高水</td>
+          </tr>
+
+		  <tr bgcolor="#FFFFFF">
+            <td align="center" >
+			  <input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />
+            </td>
+            <td ><div align="center"><a href="" onclick="javascript:orgSelect()"><img src="../../../images/alter.gif" alt="修改" width="15" height="16" border="0" /></a></div></td>
+            <td ><a href="查看.html">青果项目结项</a></td>
+			<td >李子</td>
+			<td >2014-05-22 10:30:21</td>
+			<td >2014-05-26</td>
+			<td >李冰、张飞、罗纹、高水</td>
+          </tr>
+
+		  <tr bgcolor="#FFFFFF">
+            <td align="center" >
+			  <input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />
+            </td>
+            <td ><div align="center"><a href="" onclick="javascript:orgSelect()"><img src="../../../images/alter.gif" alt="修改" width="15" height="16" border="0" /></a></div></td>
+            <td ><a href="查看.html">青果项目结项</a></td>
+			<td >李子</td>
+			<td >2014-05-22 10:30:21</td>
+			<td >2014-05-26</td>
+			<td >李冰、张飞、罗纹、高水</td>
+          </tr>
+
+		  <tr bgcolor="#FFFFFF">
+            <td align="center" >
+			  <input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />
+            </td>
+            <td ><div align="center"><a href="" onclick="javascript:orgSelect()"><img src="../../../images/alter.gif" alt="修改" width="15" height="16" border="0" /></a></div></td>
+            <td ><a href="查看.html">青果项目结项</a></td>
+			<td >李子</td>
+			<td >2014-05-22 10:30:21</td>
+			<td >2014-05-26</td>
+			<td >李冰、张飞、罗纹、高水</td>
+          </tr>
+         
+            <td colspan="7" class="td_foot">[ 共有3条记录分1页显示，当前显示第1页] 每页10条 <a href="#">首页</a> <a href="#">上一页</a> <a href="#">下一页</a> <a href="#">末页</a><span class="page_top_on">
+              <input name="textfield22223" type="text" class="input_title" value="" size="4" />
+              <input type="submit" name="Submit32" value="转到">
+              </span></td>
+          </tr>
+        </table>
+      </DIV>
+      <DIV class="tagContent" id="tagContent1">
+
+        <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#98A5D4">
+            <tr class="td_hed">
+            <td width="28"><input type="checkbox" name="checkbox8" value="checkbox"  onClick="selectAll()"></td>
+            <td width="38" >操作</td>
+            <td width="111" >通知名称</td>
+			<td width="60" >发起人</td>
+			<td width="80" >发起时间</td>
+			<td width="80" >到期时间</td>
+			<td width="300" >接收人</td>
+          </tr>
+          <tr bgcolor="#FFFFFF">
+            <td align="center" >
+			  <input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />
+            </td>
+            <td ><div align="center"><a href="" onclick="javascript:orgSelect()"><img src="../../../images/alter.gif" alt="修改" width="15" height="16" border="0" /></a></div></td>
+            <td ><a href="查看.html">青果项目结项</a></td>
+			<td >李子</td>
+			<td >2014-05-22 10:30:21</td>
+			<td >2014-05-26</td>
+			<td >李冰、张飞、罗纹、高水</td>
+          </tr>
+
+		  <tr bgcolor="#FFFFFF">
+            <td align="center" >
+			  <input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />
+            </td>
+            <td ><div align="center"><a href="" onclick="javascript:orgSelect()"><img src="../../../images/alter.gif" alt="修改" width="15" height="16" border="0" /></a></div></td>
+            <td ><a href="查看.html">青果项目结项</a></td>
+			<td >李子</td>
+			<td >2014-05-22 10:30:21</td>
+			<td >2014-05-26</td>
+			<td >李冰、张飞、罗纹、高水</td>
+          </tr>
+
+		  <tr bgcolor="#FFFFFF">
+            <td align="center" >
+			  <input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />
+            </td>
+            <td ><div align="center"><a href="" onclick="javascript:orgSelect()"><img src="../../../images/alter.gif" alt="修改" width="15" height="16" border="0" /></a></div></td>
+            <td ><a href="查看.html">青果项目结项</a></td>
+			<td >李子</td>
+			<td >2014-05-22 10:30:21</td>
+			<td >2014-05-26</td>
+			<td >李冰、张飞、罗纹、高水</td>
+          </tr>
+
+		  <tr bgcolor="#FFFFFF">
+            <td align="center" >
+			  <input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />
+            </td>
+            <td ><div align="center"><a href="" onclick="javascript:orgSelect()"><img src="../../../images/alter.gif" alt="修改" width="15" height="16" border="0" /></a></div></td>
+            <td ><a href="查看.html">青果项目结项</a></td>
+			<td >李子</td>
+			<td >2014-05-22 10:30:21</td>
+			<td >2014-05-26</td>
+			<td >李冰、张飞、罗纹、高水</td>
+          </tr>
+          <tr>
+            <td colspan="7" class="td_foot">[ 共有8条记录分1页显示，当前显示第1页] 每页10条<a href="#"> 首页</a> <a href="#">上一页</a> <a href="#">下一页</a> <a href="#">末页</a><span class="page_top_on">
+              <input name="textfield22223" type="text" value="" size="4" />
+              <input type="submit" name="Submit32" value="转到">
+              </span></td>
+          </tr>
+        </table>
+      </DIV>
+    </DIV>
+  </DIV>
+
+
+
+
+</body>
+</html>
