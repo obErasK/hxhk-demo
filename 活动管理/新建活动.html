@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+<link href="../../../css/list.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+ function orgSelect() {
+     var url = "新建.html";
+     window.showModalDialog(url,self,"dialogHeight:480px; dialogWidth:900px");
+  }
+  function selectTag(showContent,selfObj){
+    // 操作标签
+	var tag = document.getElementById("myul").getElementsByTagName("li");
+	var taglength = tag.length;
+	for(i=0; i<taglength; i++){
+		tag[i].className = "noSelectTag";
+	}
+	selfObj.className = "onSelectTag";
+	// 操作内容
+	for(i=0; i<taglength;i++){
+	    j=document.getElementById("tagContent"+i)
+		j.style.display = "none";
+	}
+	document.getElementById(showContent).style.display = "block";
+	
+	
+}
+</script>
+<style>
+     .onSelectTag{
+	     float:left; background-color:#4878dc; width:120px; text-align:center; cursor:pointer;
+	 }
+	 .noSelectTag{
+	     float:left; background-color:#b9cefb; width:120px; text-align:center;margin-left:3px;cursor:pointer;
+	 }
+    .define{
+	     background-image:url(../../../images/queding.png);
+		 width:65px;
+		 height:35px;
+	}
+	.cancle{
+	     background-image:url(../../../images/quxiao.png);
+		 width:65px;
+		 height:35px;
+	}
+	
+</style>
+<body>
+<div class="top_nav1">
+        <ul id="myul">
+		    <li class="noSelectTag"><a href="待办活动.html">待办活动</a></li>
+			<li class="noSelectTag"><a href="已办活动.html">已办活动</a></li>
+			<li class="onSelectTag">新建活动</li>
+		</ul>
+		<ul>
+		     <li style=" float:left; margin-left:100px"><img src="../../../images/search1.png"></li>
+			
+		</ul>
+     
+		
+		
+</div>
+
+<!-- 新建活动-->
+<div id="tagContent2" >
+    <form action="#" method="post">
+	    <table width="100%" height="100%">
+			<tr style=" width:100% ; height:10%">
+			    <td>发&nbsp;&nbsp;&nbsp;起&nbsp;&nbsp;&nbsp;人：</td>
+				<td><input type="text" value="" name="name" /></td>
+			</tr>
+			<tr>
+				 <td colspan="2"><hr/></td>
+			</tr>
+		    <tr style=" width:100% ; height:10%;">
+			    <td style=" width:10% ">标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;题：</td>
+				<td style=" width:70% "><input type="text" value="" size="80" name="name" /></td>
+			</tr>
+			<tr>
+				 <td colspan="2"><hr/></td>
+			</tr>
+			<tr style=" width:100% ; height:10%">
+			    <td colspan="2">选&nbsp;&nbsp;&nbsp;择&nbsp;&nbsp;&nbsp;题：</td>
+			</tr>
+			<tr style=" width:100% ; height:10%">
+				<td align="right" style="width:10% ">1.&nbsp;</td>
+				<td><input type="text" size="80" value="请输入问题"><img style=" margin-bottom:-8px;width:25px; height:25px " src="../../../images/tianjiatubiao.png"></td>
+			</tr>
+			<tr style=" width:100% ; height:10%">
+				<td>&nbsp;</td>
+				<td>A&nbsp;<input type="text" size="80" value="请输入答案"></td>
+			</tr>
+			<tr style=" width:100% ; height:10%">
+				<td>&nbsp;</td>
+				<td>B&nbsp;<input type="text" size="80" value="请输入答案"><img style=" margin-bottom:-8px;width:25px; height:25px " src="../../../images/tianjiatubiao.png"></td>
+			</tr>
+			<tr>
+				 <td colspan="2"><hr/></td>
+			</tr>
+			<tr style=" width:100% ; height:10%">
+			    <td>问&nbsp;&nbsp;&nbsp;答&nbsp;&nbsp;&nbsp;题：</td>
+			</tr>
+			<tr style=" width:100% ; height:10%">
+			    <td>&nbsp;</td>
+				<td><input type="text" value="请输入问题" size="80" name="name" /><img style=" margin-bottom:-8px;width:25px; height:25px " src="../../../images/tianjiatubiao.png"></td>
+			</tr>
+			<tr>
+				 <td colspan="2"><hr/></td>
+			</tr>
+			<tr style=" width:100% ; height:10%">
+			    <td>接&nbsp;&nbsp;&nbsp;收&nbsp;&nbsp;&nbsp;人：</td>
+				<td><input type="text" value="" size="25"  name="name" /><img style=" margin-bottom:-8px;width:25px; height:25px " src="../../../images/tianjiatubiao.png"></td>
+			</tr>
+			<tr>
+				 <td colspan="2"><hr/></td>
+			</tr>
+			<tr style=" width:100% ; height:10%;">
+			
+			    <td colspan="2" style="text-align:center;"><input type="button" class="define"  onClick="javascript:history.go(-1);"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="button" class="cancle"  onClick="javascript:history.go(-1);"></td>
+				
+			    
+			</tr>
+		</table>
+	<form>
+</div>
+</body>
+</html>

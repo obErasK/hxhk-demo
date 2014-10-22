@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>新建任务</title>
+<link href="../../../css/list.css" rel="stylesheet" type="text/css">
+<style>
+body {
+	background-color: #F1F6FC;
+	margin-left: 10px;
+	margin-top: 0px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+</style>
+</head>
+
+<body>
+<div class="top_title">新建任务</div>
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#98a5d4">
+  <tr bgcolor="#FFFFFF">
+    <td width="110" align="right" class="td_hed_title">任务名称：</td>
+    <td colspan="3" ><input name="1" type="text" class="input" id="1"size="20" /></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td width="110" align="right" class="td_hed_title">任务内容：</td>
+    <td  colspan="3" width="790"><textarea name="textarea" cols="93" rows="2"></textarea></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td width="110" align="right" class="td_hed_title">任务执行人：</td>
+    <td><input name="3" type="button" class="button"size="20" value="选择执行人" onClick=""/></td>
+    <td  width="110"align="right" class="td_hed_title">任务执行节点：</td>
+    <td><input name="3" type="button" class="button"size="20" value="选择任务执行节点"  onClick=""/></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td align="right" class="td_hed_title">是否回执：</td>
+    <td  colspan="4">
+      <select name="select" class="input">
+	        <option value="请选择">请选择</option>
+			<option value="是">是</option>
+			<option value="否">否</option>
+      </select>   </td>
+  
+  </tr>
+    <tr bgcolor="#FFFFFF">
+      <td height="40" colspan="4" align="center">
+	  <input name="Submit3" type="submit" class="button" value="保存" />
+      <input name="Submit32" type="submit" class="button" value="保存并添加" />
+      <input name="Submit322" type="submit" class="button" value="关闭" onClick=" parent.window.close();" /></td>
+    </tr>
+</table>
+</body>
+</html>
