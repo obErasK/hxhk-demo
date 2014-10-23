@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+<link href="../../../css/list.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+ function orgSelect() {
+     var url = "新建.html";
+     window.showModalDialog(url,self,"dialogHeight:480px; dialogWidth:900px");
+  }
+  //
+  function selectTag(showContent,selfObj){
+    // 操作标签 
+	var tag = document.getElementById("myul").getElementsByTagName("li");
+	var taglength = tag.length;
+	for(i=0; i<taglength; i++){
+		tag[i].className = "noSelectTag";
+	}
+	selfObj.className = "onSelectTag";
+	// 操作内容
+	for(i=0; i<taglength;i++){
+	    j=document.getElementById("tagContent"+i)
+		j.style.display = "none";
+	}
+	document.getElementById(showContent).style.display = "block";
+	
+	
+}
+</script>
+<style>
+     .onSelectTag{
+	     float:left; background-color:#4878dc; width:120px; text-align:center; cursor:pointer;
+	 }
+	 .noSelectTag{
+	     float:left; background-color:#b9cefb; width:120px; text-align:center;margin-left:3px;cursor:pointer;
+	 }
+	
+</style>
+<body>
+<div class="top_nav1">
+        <ul id="myul">
+		    <li class="onSelectTag">待办任务</li>
+			<li class="noSelectTag"><a href="已办任务.html">已办任务</a></li>
+			<li class="noSelectTag"><a href="新建任务.html">新建任务</a></li>
+		</ul>
+		<ul>
+		     <li style=" float:left; margin-left:100px"><img src="../../../images/search1.png"></li>
+			 <li style=" float:left; margin-left:30px"><img src="../../../images/lajixiang.png"></li>
+		</ul>
+
+</div>
+<div>
+<table width="100%" id="dataTable" border="0" cellpadding="3" cellspacing="1" bgcolor="#98A5D4">
+   <tr class="td_hed">
+      <td width="5%"><input type="checkbox" name="checkbox8" value="checkbox"  onClick="selectAll()"></td>
+      <td width="15%" ><span class="style2">名称</span></td>
+	  <td width="15%" ><span class="style2">发起人</span></td>
+	  <td width="15%" ><span class="style2">时间</span></td>
+	
+    <tr bgcolor="#FFFFFF">
+      <td align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />     </td>
+      <td ><img src="../../../images/faqiwodetubiao.png"><a href="发起者新建.html">发起者新建</a></td>
+      <td >李欣欣</td>
+      <td>今天 10:12</td>
+    </tr>
+	 <tr bgcolor="#FFFFFF">
+      <td width="34px" align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />     </td>
+      <td width="295px"><img src="../../../images/wofaqidetubiao.png"><a href="发起者评分及结束.html">发起者评分及结束</a></td>
+      <td width="174px">王磊</td>
+      <td>昨天 10:12</td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" /></td>
+      <td ><img src="../../../images/wofaqidetubiao.png"><a href="接收者发送回执.html">接收者发送回执</a></td>
+	  <td>李四</td>
+      <td>2014-04-12</td>
+    
+    </tr>
+	<tr bgcolor="#FFFFFF">
+      <td align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" /></td>
+      <td ><img src="../../../images/faqiwodetubiao.png"><a href="接收者发送反馈.html">接收者发送反馈</a></td>
+	  <td>王五</td>
+      <td>2014-04-12</td>
+    
+    </tr>
+	<tr bgcolor="#FFFFFF">
+      <td align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" /></td>
+      <td ><img src="../../../images/wofaqidetubiao.png"><a href="接收者查看任务结束.html">接收者查看任务结束</a></td>
+	  <td>李四</td>
+      <td>2013-04-12</td>
+    
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />     </td>
+      <td ><img src="../../../images/faqiwodetubiao.png"><a href="直接上级审批.html">直接上级审批</a></td>
+	  <td>余佳</td>
+      <td>2013-02-12</td>
+    </tr>
+	 <tr bgcolor="#FFFFFF">
+      <td align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />     </td>
+      <td ><img src="../../../images/faqiwodetubiao.png"><a href="发起者查看上级审批结果.html">发起者查看上级审批结果</a></td>
+	  <td>大牛</td>
+      <td>2012-04-12</td>
+    </tr>
+	 <tr bgcolor="#FFFFFF">
+      <td align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />     </td>
+      <td ><img src="../../../images/wofaqidetubiao.png"><a href="查看.html">北京竞标项目</a></td>
+	  <td>张三</td>
+      <td>2013-01-12</td>
+    </tr>
+	<tr bgcolor="#FFFFFF">
+      <td align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />     </td>
+      <td ><img src="../../../images/faqiwodetubiao.png"><a href="查看.html">北京竞标项目</a></td>
+	  <td>余佳</td>
+      <td>2011-04-12</td>
+    </tr>
+	<tr>
+      <td colspan="4" class="td_foot">[ 共有9条记录 分1页显示，当前显示第1页] 每页15条 <a href="#">首页</a> <a href="#">上一页</a> <a href="#">下一页</a> <a href="#">末页</a><span class="page_top_on">
+        <input name="textfield22223" type="text" class="input_title" value="" size="4" />
+        <input type="submit" name="Submit32" value="转到">
+      </span></td>
+    </tr>
+</table>
+</div>
+
+</body>
+</html>
