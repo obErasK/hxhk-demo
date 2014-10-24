@@ -1,0 +1,139 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>查看任务</title>
+<link href="../../../css/list.css" rel="stylesheet" type="text/css">
+<style>
+body {
+	background-color: #F1F6FC;
+	margin-left: 10px;
+	margin-top: 0px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+</style>
+<script>
+   function change(){
+       var obj=document.getElementById("DIVTEXT");
+       if(obj.style.display=="none"){
+           obj.style.display="block"
+       }else{
+           obj.style.display="none"
+       }
+   }
+</script>
+</head>
+
+<body>
+<div class="top_title">查看任务</div>
+<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#98a5d4">
+  <tr bgcolor="#FFFFFF">
+    <td width="90" align="right" class="td_hed_title">任务名称：</td>
+    <td colspan="3" >山东项目进度</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td align="right" class="td_hed_title">任务内容：</td>
+    <td  colspan="2" width="790">按执行节点回复工作进度</td>
+	<td><a href="结束任务.html"><input type="button" value="结束任务"></a></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td align="right" class="td_hed_title">已回执(2人)：</td>
+    <td colspan="3">
+		<table>
+		  <tr>
+			 <td rowspan="2"><img src="../../../images/touxiangb.png"></td>
+			 <td style=" font-weight:bold; font-size:16px ">安峰</td>
+			 <td>&nbsp;&nbsp;&nbsp;</td>
+			<td rowspan="2"><a href="发起者评分及结束2.html"><img src="../../../images/touxiangd.png"></a></td>
+			 <td style=" font-weight:bold; font-size:16px ">乔明</td>
+			 <td>&nbsp;&nbsp;&nbsp;</td>
+		  </tr>
+		  <tr>
+			 <td>市场部&nbsp;&nbsp;&nbsp;</td>
+			 <td style=" text-align:right ">2014-06-08 11:02</td>
+			 <td>产品部&nbsp;&nbsp;&nbsp;</td>
+			 <td style=" text-align:right ">2014-06-10 15:05</td>
+		  </tr>
+		  <tr>
+			 
+			 
+		  </tr>
+		  <tr>
+			 
+		  </tr>
+		</table>
+	</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td align="right" class="td_hed_title">未回执(1人)：</td>
+    <td colspan="3">
+		<table>
+		  <tr>
+			 <td rowspan="2"><img src="../../../images/touxiangc.png"></td>
+			 <td style=" font-weight:bold; font-size:16px ">欣欣</td>
+			 <td>&nbsp;&nbsp;&nbsp;</td>
+
+		  </tr>
+		  <tr>
+			 <td>市场部</td>
+			 <td>&nbsp;&nbsp;&nbsp;</td>
+
+		  </tr>
+		  
+		</table>
+	</td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td align="right" class="td_hed_title">任务安排：</td>
+    <td colspan="3">
+	<table width="100%" border="1px" cellspacing="0" style="border-collapse:collapse " align="center" cellpadding="4">
+		<tr bgcolor="#FFFFFF" align="center" width="100%">
+			<td>任务要求</td>
+			<td>节点设置</td>
+			<td>完成情况</td>
+			<td>备注信息</td>
+			<td>评分</td>
+		</tr>
+		<tr>
+			<td align="center">是否已完成5家厂商接入？</td>
+			<td align="center">2014-06-10</td>
+			<td align="center">已完成</td>
+			<td align="center">目前已完成7家厂商接入</td>
+			<td align="center">90</td>
+		</tr>
+		<tr>
+			<td align="center">是否已完成6家厂商接入？</td>
+			<td align="center">2014-06-15</td>
+			<td align="center">已完成</td>
+			<td align="center">目前已完成7家厂商接入</td>
+			<td align="center"><a href="javascript:change();"><input type="button" value="评分"></a></td>
+		</tr>
+		
+	</table>
+	</td>
+  </tr>
+</table>
+
+<div id="DIVTEXT" style="display:none ">
+<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#98a5d4">
+  <tr bgcolor="#FFFFFF">
+    <td align="right" class="td_hed_title" width="90">评分：</td>
+    <td><input type="text" size="85"></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td align="right" class="td_hed_title">意见：</td>
+    <td><input type="text" size="85"></td>
+  </tr>
+</table>
+</div>
+
+
+<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#98a5d4">
+  <tr bgcolor="#FFFFFF">
+    <td height="40" colspan="4" align="center">
+	<a href="待办任务.html"><input name="Submit322" type="submit" class="button" value="发送"  /></a>
+	<a href="待办任务.html"><input name="Submit322" type="submit" class="button" value="返回"  /></a>	  </td>
+  </tr>
+</table>
+</body>
+</html>
