@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+<link href="../../../css/list.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+ function orgSelect() {
+     var url = "新建.html";
+     window.showModalDialog(url,self,"dialogHeight:480px; dialogWidth:900px");
+  }
+  function selectTag(showContent,selfObj){
+    // 操作标签
+	var tag = document.getElementById("myul").getElementsByTagName("li");
+	var taglength = tag.length;
+	for(i=0; i<taglength; i++){
+		tag[i].className = "noSelectTag";
+	}
+	selfObj.className = "onSelectTag";
+	// 操作内容
+	for(i=0; i<taglength;i++){
+	    j=document.getElementById("tagContent"+i)
+		j.style.display = "none";
+	}
+	document.getElementById(showContent).style.display = "block";
+	
+	
+}
+function selectReason(obj){
+    for(i=0; i<3; i++){
+	    var id="reason"+i;
+		document.getElementById(id).className = "noSelectReason";
+	}
+	 obj.className = "onSelectReason";
+	 document.getElementById("sy").value=obj.innerHTML;
+}
+</script>
+<style>
+     .onSelectTag{
+	     float:left; background-color:#4878dc; width:120px; text-align:center; cursor:pointer;
+	 }
+	 .noSelectTag{
+	     float:left; background-color:#b9cefb; width:120px; text-align:center;margin-left:3px;cursor:pointer;
+	 }
+   
+	.noSelectReason{
+	     float:left; width:60px;
+		 height:25px;
+		 text-align:center;
+		 line-height:25px;
+		 cursor:pointer;
+		 border:1px solid #B8C6E9;
+	}
+	.onSelectReason{
+	     float:left;
+		 width:60px;
+		 height:25px; 
+		 text-align:center;
+		 line-height:25px; 
+		 background-color:#00b7ee;
+		 cursor:pointer;
+		 border:1px solid #B8C6E9;
+	}
+</style>
+<body >
+<div class="top_title">查看请假</div>
+<div class="top_nav1">
+        
+		<ul>
+			 <li style=" float:right; margin-right:30px"><input onClick="history.go(-1)" value="返回" type="button" ></li>
+		     <li style=" float:right; margin-right:30px"><img src="../../../images/lajixiang.png"></li>
+		     <li style=" float:right; margin-right:30px"><img src="../../../images/search1.png"></li>
+		</ul>		
+</div>
+
+
+<div id="tagContent2" style=" margin-top:-30px ">
+    <form action="#" method="post">
+	    <table width="100%" height="100%">
+		    <tr style=" width:100% ; height:10%;">
+			    <td>审&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人：</td>
+				<td colspan="3">
+					<table>
+						  <tr>
+							 <td rowspan="2"><img src="../../../images/touxiangc.png" width="50px" height="50px"></td>
+							 <td style=" font-weight:bold; font-size:16px ">花花</td>
+						  </tr>
+						  <tr>
+							 <td>市场部</td>
+						  </tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				 <td colspan="4"><hr/></td>
+			</tr>
+		    <tr style=" width:100% ; height:10%;">
+			    <td style=" width:10% ">事&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由：</td>
+				<td colspan="3" style=" width:70% "><input type="hidden" id="sy" name="sy" value="去医院"><div id="reason0" class="onSelectReason" onClick="selectReason(this)">病假</div><div style=" float:left; width:2px; height:25px;"></div><div id="reason1" class="noSelectReason" onClick="selectReason(this)">事假</div><div style=" float:left; width:2px;height:25px; "></div><div id="reason2" class="noSelectReason" onClick="selectReason(this)">外出</div></td>
+			</tr>
+			<tr>
+				 <td colspan="4"><hr/></td>
+			</tr>
+			<tr style=" width:100% ; height:20%">
+			    <td>描&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;述：</td>
+				<td colspan="3"><textarea style=" width:510px; height:50px">肚子太难过。。。</textarea></td>
+			</tr>
+			<tr>
+				 <td colspan="4"><hr/></td>
+			</tr>
+			<tr style=" width:100% ; height:10%">
+			    <td>开&nbsp;&nbsp;&nbsp;始&nbsp;&nbsp;&nbsp;时&nbsp;&nbsp;&nbsp;间：</td>
+				<td colspan="3"><input type="text" value="2014-06-08 09：00" name="name" /></td>
+			</tr>
+			<tr>
+				 <td colspan="4"><hr/></td>
+			</tr>
+			<tr style=" width:100% ; height:10%">
+			    <td>结&nbsp;&nbsp;&nbsp;束&nbsp;&nbsp;&nbsp;时&nbsp;&nbsp;&nbsp;间：</td>
+				<td colspan="3"><input type="text" value="2014-06-08 19：00"  name="name" /></td>
+			</tr>
+			<tr>
+				 <td colspan="4"><hr/></td>
+			</tr>
+			<tr style=" width:100% ; height:10%;">
+			    <td>附&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;件：</td>
+				<td colspan="3"><input type="file" value="" size="25"  name="name" /></td>
+			</tr>
+			<tr>
+				 <td colspan="4"><hr/></td>
+			</tr>
+			 <tr style=" width:100% ; height:10%;">
+			    <td>审&nbsp;&nbsp;&nbsp;&nbsp;批&nbsp;&nbsp;&nbsp;&nbsp;状&nbsp;&nbsp;&nbsp;&nbsp;态：</td>
+				<td colspan="3">
+					<table>
+					  <tr>
+						 <td rowspan="2"><img src="../../../images/touxiangb.png" width="50px" height="50px"></td>
+						 <td style=" font-weight:bold; font-size:16px ">安峰</td>
+						 <td>&nbsp;&nbsp;&nbsp;</td>
+						 <td  style=" font-weight:bold; font-size:16px; text-align:right ">已同意</td>
+					  </tr>
+					  <tr>
+						 <td>市场部</td>
+						 <td>&nbsp;&nbsp;&nbsp;</td>
+						 <td style=" text-align:right ">2014-06-08 11:02</td>
+					  </tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				 <td colspan="4"><hr/></td>
+			</tr>
+			
+		</table>
+	<form>
+</div>
+</body>
+</html>
