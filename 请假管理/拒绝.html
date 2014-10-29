@@ -1,0 +1,46 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>查看用户</title>
+<link href="../../css/list.css" rel="stylesheet" type="text/css">
+<style>
+body {
+	background-color: #F1F6FC;
+	margin-left: 10px;
+	margin-top: 0px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+</style>
+<head>
+<script>
+   function orgSelect(flag){
+       if('1'==flag){
+	        parent.window.close();
+	        var url = "确定.html";
+            window.showModalDialog(url,self,"dialogHeight:180px; dialogWidth:400px");
+	   }else{
+	        parent.window.close();
+	   }
+   }
+</script>
+</head>
+<body>
+<table width="100%" height="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#98a5d4">
+  <tr bgcolor="#FFFFFF" style=" height:20% ">
+    <td align="left" colspan="2">审核提醒：</td>
+  </tr>
+  <tr bgcolor="#FFFFFF" style=" height:50% ">
+    <td colspan="2"><textarea style="border:0px;width:100%; height:100% ">可填入审核意见。。。</textarea></td>
+  </tr>
+  <tr bgcolor="#FFFFFF" style=" height:20% ">
+    <td height="40" align="center">
+	     <input name="Submit322" type="button" class="define" value="确    定" onClick="orgSelect(1)" />	
+	</td>
+	<td height="40" align="center">
+	     <input name="Submit322" type="button" class="cancle"  value="取    消" onClick="orgSelect(2)" />
+	</td>
+  </tr>
+</table>
+</body>
+</html>
