@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+<link href="../../../css/list.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+ function orgSelect() {
+     var url = "新建.html";
+     window.showModalDialog(url,self,"dialogHeight:480px; dialogWidth:900px");
+  }
+  function selectTag(showContent,selfObj){
+    // 操作标签
+	var tag = document.getElementById("myul").getElementsByTagName("li");
+	var taglength = tag.length;
+	for(i=0; i<taglength; i++){
+		tag[i].className = "noSelectTag";
+	}
+	selfObj.className = "onSelectTag";
+	// 操作内容
+	for(i=0; i<taglength;i++){
+	    j=document.getElementById("tagContent"+i)
+		j.style.display = "none";
+	}
+	document.getElementById(showContent).style.display = "block";
+	
+	
+}
+function selectReason(obj){
+    for(i=0; i<2; i++){
+	    var id="reason"+i;
+		document.getElementById(id).className = "noSelectReason";
+	}
+	 obj.className = "onSelectReason";
+	 document.getElementById("sy").value=obj.innerHTML;
+}
+</script>
+<style>
+     .onSelectTag{
+	     float:left; background-color:#4878dc; width:120px; text-align:center; cursor:pointer;
+	 }
+	 .noSelectTag{
+	     float:left; background-color:#b9cefb; width:120px; text-align:center;margin-left:3px;cursor:pointer;
+	 }
+	.noSelectReason{
+	     float:left; width:60px;
+		 height:25px;
+		 text-align:center;
+		 line-height:25px;
+		 cursor:pointer;
+		 border:1px solid #B8C6E9;
+	}
+	.onSelectReason{
+	     float:left;
+		 width:60px;
+		 height:25px; 
+		 text-align:center;
+		 line-height:25px; 
+		 background-color:#00b7ee;
+		 cursor:pointer;
+		 border:1px solid #B8C6E9;
+	}
+</style>
+<body>
+<div class="top_nav1">
+        <ul id="myul">
+		    <li class="onSelectTag">未回执</li>
+			<li class="noSelectTag"><a href="订票管理_已审批列表.html">已回执</a></li>
+			<li class="noSelectTag"><a href="订票管理_新建订票.html">新建订票</a></li>
+		</ul>
+		<ul>
+		     <li style=" float:left; margin-left:100px"><img src="../../../images/search1.png"></li>
+			 <li style=" float:left; margin-left:30px"><img src="../../../images/lajixiang.png"></li>
+		</ul>		
+</div>
+<!-- 待审批-->
+<div id="tagContent0">
+<table width="100%" border="0" id="dataTable" cellpadding="3" cellspacing="1" bgcolor="#98A5D4">
+   <tr class="td_hed">
+      <td width="5%"><input type="checkbox" name="checkbox8" value="checkbox"  onClick="selectAll()"></td>
+	  <td width="15%" ><span class="style2">申请人</span></td>
+      <td width="10%" ><span class="style2">类型</span></td>
+	  <td width="10%" ><span class="style2">是否往返</span></td>
+	  <td width="10%" ><span class="style2">出发城市</span></td>
+      <td width="10%" ><span class="style2">到达城市</span></td>
+	  <td width="25%" ><span class="style2">备注</span></td>
+    </tr>
+	
+    <tr bgcolor="#FFFFFF">
+      <td width="34px" align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />     </td>
+      <td width="295px"><img src="../../../images/wofaqidetubiao.png"><a href="订票管理_待审批.html">李欣欣</a></td>
+	  <td width="174px">飞机票</td>
+	  <td >是</a></td>
+      <td >北京</td>
+	  <td >上海</td>
+      <td>发反反复复反反复复</td>
+    </tr>
+   <tr bgcolor="#FFFFFF">
+      <td width="34px" align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />     </td>
+      <td width="295px"><img src="../../../images/faqiwodetubiao.png"><a href="订票管理_待审批.html">李欣欣</a></td>
+	  <td width="174px">飞机票</td>
+	  <td >是</a></td>
+      <td >北京</td>
+	  <td >上海</td>
+      <td>我要一等舱</td>
+    </tr>
+	 <tr bgcolor="#FFFFFF">
+      <td width="34px" align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />     </td>
+      <td width="295px"><img src="../../../images/wofaqidetubiao.png"><a href="订票管理_待审批.html">李欣欣</a></td>
+	  <td width="174px">飞机票</td>
+	  <td >是</a></td>
+      <td >北京</td>
+	  <td >上海</td>
+      <td></td>
+    </tr>
+	 <tr bgcolor="#FFFFFF">
+      <td width="34px" align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />     </td>
+      <td width="295px"><img src="../../../images/faqiwodetubiao.png"><a href="订票管理_待审批.html">李欣欣</a></td>
+	  <td width="174px">飞机票</td>
+	  <td >是</a></td>
+      <td >北京</td>
+	  <td >上海</td>
+      <td></td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td width="34px" align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />     </td>
+      <td width="295px"><img src="../../../images/wofaqidetubiao.png"><a href="订票管理_待审批.html">李欣欣</a></td>
+	  <td width="174px">飞机票</td>
+	  <td >是</a></td>
+      <td >北京</td>
+	  <td >上海</td>
+      <td></td>
+    </tr>
+	  <tr bgcolor="#FFFFFF">
+      <td width="34px" align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />     </td>
+      <td width="295px"><img src="../../../images/faqiwodetubiao.png"><a href="订票管理_待审批.html">李欣欣</a></td>
+	  <td width="174px">飞机票</td>
+	  <td >是</a></td>
+      <td >北京</td>
+	  <td >上海</td>
+      <td></td>
+    </tr>
+	 <tr bgcolor="#FFFFFF">
+      <td width="34px" align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />     </td>
+      <td width="295px"><img src="../../../images/wofaqidetubiao.png"><a href="订票管理_待审批.html">李欣欣</a></td>
+	  <td width="174px">飞机票</td>
+	  <td >是</a></td>
+      <td >北京</td>
+	  <td >上海</td>
+      <td></td>
+    </tr>
+	 <tr bgcolor="#FFFFFF">
+      <td width="34px" align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />     </td>
+      <td width="295px"><img src="../../../images/faqiwodetubiao.png"><a href="订票管理_待审批.html">李欣欣</a></td>
+	  <td width="174px">飞机票</td>
+	  <td >是</a></td>
+      <td >北京</td>
+	  <td >上海</td>
+      <td></td>
+    </tr>
+	<tr>
+      <td colspan="8" class="td_foot">[ 共有9条记录 分1页显示，当前显示第1页] 每页15条 <a href="#">首页</a> <a href="#">上一页</a> <a href="#">下一页</a> <a href="#">末页</a><span class="page_top_on">
+        <input name="textfield22223" type="text" class="input_title" value="" size="4" />
+        <input type="submit" name="Submit32" value="转到">
+      </span></td>
+    </tr>
+</table>
+</div>
+</body>
+</html>
