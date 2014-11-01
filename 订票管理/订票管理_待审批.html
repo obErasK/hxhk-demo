@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+<link href="../../../css/list.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+ function orgSelect() {
+     var url = "新建.html";
+     window.showModalDialog(url,self,"dialogHeight:480px; dialogWidth:900px");
+  }
+  function selectTag(showContent,selfObj){
+    // 操作标签
+	var tag = document.getElementById("myul").getElementsByTagName("li");
+	var taglength = tag.length;
+	for(i=0; i<taglength; i++){
+		tag[i].className = "noSelectTag";
+	}
+	selfObj.className = "onSelectTag";
+	// 操作内容
+	for(i=0; i<taglength;i++){
+	    j=document.getElementById("tagContent"+i)
+		j.style.display = "none";
+	}
+	document.getElementById(showContent).style.display = "block";
+	
+	
+}
+function selectReason(obj){
+    for(i=0; i<3; i++){
+	    var id="reason"+i;
+		document.getElementById(id).className = "noSelectReason";
+	}
+	 obj.className = "onSelectReason";
+	 document.getElementById("sy").value=obj.innerHTML;
+}
+</script>
+<style>
+     .onSelectTag{
+	     float:left; background-color:#4878dc; width:120px; text-align:center; cursor:pointer;
+	 }
+	 .noSelectTag{
+	     float:left; background-color:#b9cefb; width:120px; text-align:center;margin-left:3px;cursor:pointer;
+	 }
+	.noSelectReason{
+	     float:left; width:60px;
+		 height:25px;
+		 text-align:center;
+		 line-height:25px;
+		 cursor:pointer;
+		 border:1px solid #B8C6E9;
+	}
+	.onSelectReason{
+	     float:left;
+		 width:60px;
+		 height:25px; 
+		 text-align:center;
+		 line-height:25px; 
+		 background-color:#00b7ee;
+		 cursor:pointer;
+		 border:1px solid #B8C6E9;
+	}
+</style>
+<body>
+<div class="top_title">查看订票</div>
+<div class="top_nav1">
+        
+		<ul>
+		     <li style=" float:right; margin-right:30px"><img src="../../../images/lajixiang.png"></li>
+		     <li style=" float:right; margin-right:30px"><img src="../../../images/search1.png"></li>
+		</ul>		
+</div>
+
+<!-- 新建请假-->
+<div id="tagContent2" style=" margin-top:-30px ">
+    <form action="#" method="post" >
+	    <table width="100%" height="100%">
+		   <tr style=" width:100% ; height:10%;">
+			    <td>审&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;人：</td>
+				<td colspan="3">
+					<table>
+						  <tr>
+							 <td rowspan="2"><img src="../../../images/touxiangb.png" width="50px" height="50px"></td>
+							 <td style=" font-weight:bold; font-size:15px ">花花</td>
+						  </tr>
+						  <tr>
+							 <td>市场部</td>
+						  </tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				 <td colspan="4"><hr/></td>
+			</tr>
+		    <tr style=" width:100% ; height:10%;">
+			    <td style=" width:10% ">类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型：</td>
+				<td colspan="3" style=" width:70% "><input type="hidden" id="sy" name="sy" value=""><div id="reason0" class="onSelectReason">飞机票</div><div style=" float:left; width:2px; height:25px;"></div><div id="reason1" class="noSelectReason">火车票</div></td>
+			</tr>
+			<tr>
+				 <td colspan="4"><hr/></td>
+			</tr>
+			<tr style=" width:100% ; height:20%">
+			    <td>是&nbsp;&nbsp;&nbsp;否&nbsp;&nbsp;&nbsp;往&nbsp;&nbsp;&nbsp;返：</td>
+				<td colspan="3"><input type="radio" value="" name="isWf" checked="checked"/>是<input type="radio" value="" name="isWf" />否</td>
+			</tr>
+			<tr>
+				 <td colspan="4"><hr/></td>
+			</tr>
+			<tr style=" width:100% ; height:10%">
+			    <td>出&nbsp;&nbsp;&nbsp;发&nbsp;&nbsp;&nbsp;城&nbsp;&nbsp;&nbsp;市：</td>
+				<td colspan="3">北京</td>
+			</tr>
+			<tr>
+				 <td colspan="4"><hr/></td>
+			</tr>
+			<tr style=" width:100% ; height:10%;">
+			    <td>到&nbsp;&nbsp;&nbsp;达&nbsp;&nbsp;&nbsp;城&nbsp;&nbsp;&nbsp;市：</td>
+				<td colspan="3">上海</td>
+			</tr>
+			<tr>
+				 <td colspan="4"><hr/></td>
+			</tr>
+			<tr style=" width:100% ; height:10%">
+			    <td>出&nbsp;&nbsp;&nbsp;发&nbsp;&nbsp;&nbsp;时&nbsp;&nbsp;&nbsp;间：</td>
+				<td colspan="3">2014-06-10&nbsp;&nbsp;至&nbsp;&nbsp;2014-06-12</td>
+			</tr>
+			<tr>
+				 <td colspan="4"><hr/></td>
+			</tr>
+				<tr style=" width:100% ; height:10%">
+			    <td>返&nbsp;&nbsp;&nbsp;程&nbsp;&nbsp;&nbsp;时&nbsp;&nbsp;&nbsp;间：</td>
+				<td colspan="3">2014-06-13&nbsp;&nbsp;至&nbsp;&nbsp;2014-06-14</td>
+			</tr>
+			<tr>
+				 <td colspan="4"><hr/></td>
+			</tr>
+			<tr style=" width:100% ; height:10%">
+			    <td>备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				注：</td>
+				<td colspan="3">没有备注</td>
+			</tr>
+			<tr>
+				 <td colspan="4"><hr/></td>
+			</tr>
+			<tr style=" width:100% ; height:10%;">
+			    <td ></td>
+				<td  style="width:30% ; height:30px;text-align:right; text-align:center; background-color:#00be77; cursor:pointer" onClick="window.showModalDialog('../确定.html',self,'dialogHeight:180px; dialogWidth:400px');">发送回执</td>
+				<td  style="width:30% ; height:30px; text-align:right;text-align:center; background-color:#00be77;cursor:pointer" onClick="history.go(-1)">返回</td>
+				<td  style=" width:40% "></td>
+			</tr>
+				
+		</table>
+	<form>
+</div>
+</body>
+</html>
