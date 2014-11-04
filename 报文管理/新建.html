@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+<link href="../../../css/list.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style3 {color: #ffffff}
+-->
+</style>
+</head>
+<script>
+ function orgSelect() {
+     var url = "新建.html";
+     window.showModalDialog(url,self,"dialogHeight:480px; dialogWidth:900px");
+  }
+  function selectTag(showContent,selfObj){
+    // 操作标签
+	var tag = document.getElementById("myul").getElementsByTagName("li");
+	var taglength = tag.length;
+	for(i=0; i<taglength; i++){
+		tag[i].className = "noSelectTag";
+	}
+	selfObj.className = "onSelectTag";
+	// 操作内容
+	for(i=0; i<taglength;i++){
+	    j=document.getElementById("tagContent"+i)
+		j.style.display = "none";
+	}
+	document.getElementById(showContent).style.display = "block";
+	
+	
+}
+</script>
+<style>
+     .onSelectTag{
+	     float:left; background-color:#4878dc; width:120px; text-align:center; cursor:pointer;
+	 }
+	 .noSelectTag{
+	     float:left; background-color:#b9cefb; width:120px; text-align:center;margin-left:3px;cursor:pointer;
+	 }
+    .define{
+	     background-image:url(../../../images/queding.png);
+	}
+	.cancle{
+	     background-image:url(../../../images/quxiao.png);
+	}
+ .onSelectTag1{
+	     background-color:#4878dc; text-align:center; cursor:pointer;
+	 }
+</style>
+<body>
+<div class="top_nav1">
+        <ul id="myul">
+		    <li class="noSelectTag" ><a href="&#25253;&#25991;&#23457;&#25209;&#31649;&#29702;.html">待批报文</a></li>
+			<li class="noSelectTag"><a href="&#24050;&#25209;&#25253;&#25991;.html">已批报文</a></li>
+			<li class="onSelectTag " ><a href="&#26032;&#24314;-.html" class="style3">新建报文</a></li>
+		</ul>
+		<ul>
+		     <li style=" float:left; margin-left:100px"><img src="../../../images/search1.png"></li>
+		</ul>
+     
+		
+		
+</div>
+
+<!-- 新建报文-->
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#98a5d4">
+  <tr bgcolor="#FFFFFF">
+    <td width="200" align="right" class="td_hed_title">发起人：</td>
+    <td  width="250" ><input name="1" type="text" class="input" id="1"size="20" /></td>
+    <td width="110" align="right" class="td_hed_title">所属部门：</td>
+    <td   width="250"><input name="3" type="text" class="input" size="20" value="选择部门" onClick=""/></td>
+  </tr>
+  
+    <tr bgcolor="#FFFFFF">
+    <td width="200" align="right" class="td_hed_title">标题：</td>
+    <td  width="250" ><input name="1" type="text" class="input" id="1"size="20" /></td>
+    <td width="110" align="right" class="td_hed_title">&nbsp;</td>
+    <td   width="250">&nbsp;</td>
+    </tr>
+  <tr bgcolor="#FFFFFF">
+    <td width="200" align="right" class="td_hed_title">正文：</td>
+    <td colspan="3"><textarea name="textarea" cols="93" rows="2"></textarea></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td  width="200"align="right" class="td_hed_title">附件：</td>
+    <td colspan="3"><input type="file" name="附件"></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td align="right" class="td_hed_title">审批人：</td>
+    <td  colspan="4"><input name="3" type="button" class="button"size="20" value="选择审批人" onClick=""/></td>
+  </tr>
+  <tr bgcolor="#FFFFFF">
+    <td height="40" colspan="4" align="center">
+      <input name="Submit3" type="submit" class="button" value=" 保 存 " />
+      
+      <input name="Submit322" type="submit" class="button" value=" 关 闭 " /></td>
+  </tr>
+</table>
+</body>
+</html>
