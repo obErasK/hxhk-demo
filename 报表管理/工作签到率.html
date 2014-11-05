@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+<link href="../../../css/list.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style3 {color: #FFFFFF}
+-->
+</style>
+</head>
+<script>
+ function orgSelect() {
+     var url = "新建.html";
+     window.showModalDialog(url,self,"dialogHeight:480px; dialogWidth:900px");
+  }
+  function selectTag(showContent,selfObj){
+    // 操作标签
+	var tag = document.getElementById("myul").getElementsByTagName("li");
+	var taglength = tag.length;
+	for(i=0; i<taglength; i++){
+		tag[i].className = "noSelectTag";
+	}
+	selfObj.className = "onSelectTag";
+	// 操作内容
+	for(i=0; i<taglength;i++){
+	    j=document.getElementById("tagContent"+i)
+		j.style.display = "none";
+	}
+	document.getElementById(showContent).style.display = "block";
+	
+	
+}
+</script>
+<style>
+     .onSelectTag{
+	     float:left; background-color:#4878dc; width:100px; text-align:center; cursor:pointer;
+	 }
+	 .noSelectTag{
+	     float:left; background-color:#b9cefb; width:100px; text-align:center;margin-left:3px;cursor:pointer;
+	 }
+    .define{
+	     background-image:url(../../../images/queding.png);
+	}
+	.cancle{
+	     background-image:url(../../../images/quxiao.png);
+	}
+.style2 {
+	font-size: 15px;
+	color: #FFFFFF;
+}
+ .onSelectTag1{
+	     background-color:#4878dc; text-align:center; cursor:pointer;
+	 }
+</style>
+<body>
+<div class="top_nav1">
+        <ul id="myul">
+		    <li class="onSelectTag style3" >工作签到率</li>
+			<li class="noSelectTag"><a href="&#24050;&#25209;&#25253;&#25991;.html">外出签到率</a></li>
+			<li class="noSelectTag"><a href="&#26032;&#24314;.html">任务完成率</a></li>
+			<li class="noSelectTag"><a href="&#26032;&#24314;.html">请假统计</a></li>
+			<li class="noSelectTag"><a href="&#26032;&#24314;.html">外出统计</a></li>
+			<li class="noSelectTag"><a href="&#26032;&#24314;.html">请款通过率</a></li>
+		</ul>
+		
+</div>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#98A5D4">
+  <tr>
+<td align="center"  colspan="3">
+  <img src="../img/qdl.jpg" width="680" height="176"></td>
+</tr>
+   <tr class="onSelectTag1">
+      
+      <td width="150" align="center" ><span class="style2">查看</span></td>
+      <td width="618"  align="center" ><span class="style2">日期</span></td>
+      <td width="384"  align="center" ><span class="style2">上班签到人数</span></td>
+   </tr>
+	
+    <tr bgcolor="#FFFFFF">
+      <td><div align="center"><a href="&#24050;&#31614;&#21040;.html"><img src="../img/alter.gif" width="15" height="16" border="0"></a></div></td>
+      <td><a href="&#24050;&#31614;&#21040;.html">2014年1月</a></td>
+      <td>60%</td>
+    </tr>
+	 <tr bgcolor="#FFFFFF">
+      <td width="150"><div align="center"><img src="../img/alter.gif" width="15" height="16"></div></td>
+      <td width="618">2014年2月</td>
+      <td width="384">75%</td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td><div align="center"><img src="../img/alter.gif" width="15" height="16"></div></td>
+      <td>2014年1月</td>
+      <td>100%</td>
+    </tr>
+	<tr bgcolor="#FFFFFF">
+      <td><div align="center"><img src="../img/alter.gif" width="15" height="16"></div></td>
+      <td>2014年1月</td>
+      <td>90%</td>
+    </tr>
+	<tr bgcolor="#FFFFFF">
+      <td><div align="center"><img src="../img/alter.gif" width="15" height="16"></div></td>
+      <td>2014年1月</td>
+      <td>98%</td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td><div align="center"><img src="../img/alter.gif" width="15" height="16"></div></td>
+      <td>2014年1月</td>
+      <td>99%</td>
+    </tr>
+	 <tr bgcolor="#FFFFFF">
+      <td><div align="center"><img src="../img/alter.gif" width="15" height="16"></div></td>
+      <td>2014年1月</td>
+      <td>92%</td>
+    </tr>
+	<tr>
+      <td colspan="3" class="td_foot"><strong>应签到人数：100人</strong>        [ 共有9条记录 分1页显示，当前显示第1页] <a href="#">首页</a> <a href="#">上一页</a> <a href="#">下一页</a> <a href="#">末页</a><span class="page_top_on">
+<input name="textfield22223" type="text" class="input_title" value="" size="4" />
+        <input type="submit" name="Submit32" value="转到">
+      </span></td>
+    </tr>
+</table>
+
+
+
+</body>
+</html>
