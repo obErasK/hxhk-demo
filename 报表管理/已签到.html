@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+<link href="../../../css/list.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style3 {color: #FFFFFF}
+-->
+</style>
+</head>
+<script>
+ function orgSelect() {
+     var url = "新建.html";
+     window.showModalDialog(url,self,"dialogHeight:480px; dialogWidth:900px");
+  }
+  function selectTag(showContent,selfObj){
+    // 操作标签
+	var tag = document.getElementById("myul").getElementsByTagName("li");
+	var taglength = tag.length;
+	for(i=0; i<taglength; i++){
+		tag[i].className = "noSelectTag";
+	}
+	selfObj.className = "onSelectTag";
+	// 操作内容
+	for(i=0; i<taglength;i++){
+	    j=document.getElementById("tagContent"+i)
+		j.style.display = "none";
+	}
+	document.getElementById(showContent).style.display = "block";
+	
+	
+}
+</script>
+<style>
+     .onSelectTag{
+	     float:left; background-color:#4878dc; width:120px; text-align:center; cursor:pointer;
+	 }
+	 .noSelectTag{
+	     float:left; background-color:#b9cefb; width:120px; text-align:center;margin-left:3px;cursor:pointer;
+	 }
+    .define{
+	     background-image:url(../../../images/queding.png);
+	}
+	.cancle{
+	     background-image:url(../../../images/quxiao.png);
+	}
+.style2 {
+	font-size: 15px;
+	color: #FFFFFF;
+}
+.style22 {
+	font-size: 15px;
+	color: #000000;
+}
+ .onSelectTag1{
+	     background-color:#4878dc; text-align:center; cursor:pointer;
+	 }
+</style>
+<body>
+<div class="top_nav1">
+        <ul id="myul">
+		    <li class="onSelectTag style2" >已签到</li>
+			<li class="noSelectTag style22"><a href="&#26410;&#31614;&#21040;.html">未签到</a></li>
+		</ul>
+		<ul>
+		     <li style=" float:left; margin-left:100px"><img src="../../../images/search1.png"></li>
+			 <li style=" float:left; margin-left:0px"><img src="../../../images/btn.gif" width="76" height="23"></li>
+		</ul>
+     
+		
+		
+</div>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#98A5D4">
+   <tr class="onSelectTag1">
+      
+      <td width="60px" align="center" ><span class="style2">序号</span></td>
+      <td width="80px"><span class="style2">姓名</span></td>
+      <td width="70px"><span class="style2">部门</span></td>
+      <td width="120px"><span class="style2">时间</span></td>
+   </tr>
+	
+    <tr bgcolor="#FFFFFF">
+      <td align="center">1</td>
+      <td>安峰</td>
+      <td>总经办</td>
+      <td>今天 10:12</td>
+    </tr>
+	 <tr bgcolor="#FFFFFF">
+      <td  align="center" >2</td>
+      <td width="80px">安娜</td>
+      <td width="174px">市场一部</td>
+      <td>昨天 10:12</td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td align="center" >3</td>
+      <td >安逸</td>
+	  <td>市场一部</td>
+      <td>2014-04-12</td>
+    </tr>
+	<tr bgcolor="#FFFFFF">
+      <td align="center" >4</td>
+      <td >李静</td>
+	  <td>市场一部</td>
+      <td>2014-04-12</td>
+    </tr>
+	<tr bgcolor="#FFFFFF">
+      <td align="center" >5</td>
+      <td >张掖</td>
+	  <td>市场一部</td>
+      <td>2013-04-12</td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td align="center" >6</td>
+      <td >郭璞</td>
+	  <td>市场一部</td>
+      <td>2013-02-12</td>
+    </tr>
+	 <tr bgcolor="#FFFFFF">
+      <td align="center" >7</td>
+      <td >王海</td>
+	  <td>市场一部</td>
+      <td>2012-04-12</td>
+    </tr>
+	 <tr bgcolor="#FFFFFF">
+      <td align="center" >8</td>
+      <td >李磊</td>
+	  <td>市场一部</td>
+      <td>2013-01-12</td>
+    </tr>
+	<tr bgcolor="#FFFFFF">
+      <td align="center" >9</td>
+      <td >黄埔</td>
+	  <td>市场一部</td>
+      <td>2011-04-12</td>
+    </tr>
+	<tr>
+      <td colspan="4" class="td_foot">[ 共有9条记录 分1页显示，当前显示第1页] 每页15条 <a href="#">首页</a> <a href="#">上一页</a> <a href="#">下一页</a> <a href="#">末页</a><span class="page_top_on">
+        <input name="textfield22223" type="text" class="input_title" value="" size="4" />
+        <input type="submit" name="Submit32" value="转到">
+      </span></td>
+    </tr>
+</table>
+
+
+
+</body>
+</html>
