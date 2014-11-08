@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+<link href="../../../css/list.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style3 {color: #FFFFFF}
+-->
+</style>
+</head>
+<script>
+ function orgSelect() {
+     var url = "新建.html";
+     window.showModalDialog(url,self,"dialogHeight:480px; dialogWidth:900px");
+  }
+  function selectTag(showContent,selfObj){
+    // 操作标签
+	var tag = document.getElementById("myul").getElementsByTagName("li");
+	var taglength = tag.length;
+	for(i=0; i<taglength; i++){
+		tag[i].className = "noSelectTag";
+	}
+	selfObj.className = "onSelectTag";
+	// 操作内容
+	for(i=0; i<taglength;i++){
+	    j=document.getElementById("tagContent"+i)
+		j.style.display = "none";
+	}
+	document.getElementById(showContent).style.display = "block";
+	
+	
+}
+</script>
+<style>
+     .onSelectTag{
+	     float:left; background-color:#4878dc; width:100px; text-align:center; cursor:pointer;
+	 }
+	 .noSelectTag{
+	     float:left; background-color:#b9cefb; width:100px; text-align:center;margin-left:3px;cursor:pointer;
+	 }
+    .define{
+	     background-image:url(../../../images/queding.png);
+	}
+	.cancle{
+	     background-image:url(../../../images/quxiao.png);
+	}
+.style2 {
+	font-size: 15px;
+	color: #FFFFFF;
+}
+ .onSelectTag1{
+	     background-color:#4878dc; text-align:center; cursor:pointer;
+	 }
+</style>
+<body>
+<div class="top_nav1">
+        <ul id="myul">
+		    <li class="noSelectTag"><a href="月日程管理.html">月日程管理</a></li>
+			<li class="noSelectTag"><a href="&#21608;&#26085;&#31243;&#31649;&#29702;.html">周日程管理</a></li>
+			<li class="onSelectTag style3"><a href="日日程管理.html">日日程管理</a></li>
+			<li class="noSelectTag"><a href="&#26032;&#24314;.html">新建日程</a></li>
+		</ul>
+		
+</div>
+
+	<table width="100%" height="100%">
+		<tr height="40px" bgcolor="#0E37DE">
+			<td colspan="2" align="center"><font size="5px" color="#FFFFFF" face="微软雅黑">我的日程</font></td>
+		</tr>
+		
+		<tr>
+			<td colspan="2" align="center"><font color="#2894FF" face="黑体" size="2px"><strong>2014-06-10&nbsp;&nbsp;周二</strong>&nbsp;&nbsp;<img style=" margin-bottom:-8px;width:25px; height:25px " src="../../../images/tianjiatubiao.png"></font></td>
+		</tr>
+		<tr>
+    		<td height="2" colspan="2"><hr/></td>
+  		</tr>
+		<tr>
+			<td width="10%" align="center">9:00</td>
+			<td><a href="查看.html">906会议室开会 产品宣传商讨</a></td>
+		</tr>
+		<tr>
+    		<td height="2" colspan="2"><hr/></td>
+  		</tr>
+		<tr>
+			<td width="10%" align="center">10:00</td>
+			<td><a href="查看.html">北京投标项目讨论会</a></td>
+		</tr><tr>
+    		<td height="2" colspan="2"><hr/></td>
+  		</tr>
+		<tr>
+			<td width="10%" align="center">11:00</td>
+			<td><a href="查看.html">见客户</a></td>
+		</tr><tr>
+    		<td height="2" colspan="2"><hr/></td>
+  		</tr>
+		<tr>
+			<td width="10%" align="center">12:00</td>
+			<td><a href="查看.html">102会议室开会 产品宣传商讨</a></td>
+		</tr><tr>
+    		<td height="2" colspan="2"><hr/></td>
+  		</tr>
+		<tr>
+			<td width="10%" align="center">13:00</td>
+			<td><a href="查看.html">102会议室开会 产品宣传商讨</a></td>
+		</tr><tr>
+    		<td height="2" colspan="2"><hr/></td>
+  		</tr>
+		<tr>
+			<td width="10%" align="center">14:00</td>
+			<td><a href="查看.html">102会议室开会 产品宣传商讨</a></td>
+		</tr>
+		<tr>
+    		<td height="2" colspan="2"><hr/></td>
+  		</tr>
+		<tr>
+			<td width="10%" align="center">15:00</td>
+			<td><a href="查看.html">102会议室开会 产品宣传商讨</a></td>
+		</tr>
+		<tr>
+    		<td height="2" colspan="2"><hr/></td>
+  		</tr>
+		<tr>
+			<td width="10%" align="center">16:00</td>
+			<td><a href="查看.html">102会议室开会 产品宣传商讨</a></td>
+		</tr>
+		<tr>
+    		<td height="2" colspan="2"><hr/></td>
+  		</tr>
+		<tr>
+			<td width="10%" align="center">17:00</td>
+			<td><a href="查看.html">102会议室开会 产品宣传商讨</a></td>
+		</tr>
+		<tr>
+    		<td height="2" colspan="2"><hr/></td>
+  		</tr>
+		<tr>
+			<td width="10%" align="center">18:00</td>
+			<td><a href="查看.html">102会议室开会 产品宣传商讨</a></td>
+		</tr>
+		<tr>
+    		<td height="2" colspan="2"><hr/></td>
+  		</tr>
+		<tr>
+			<td width="10%" align="center">19:00</td>
+			<td><a href="查看.html">102会议室开会 产品宣传商讨</a></td>
+		</tr>
+		<tr>
+    		<td height="2" colspan="2"><hr/></td>
+  		</tr>
+		
+	</table>
+
+
+<!--
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#98A5D4">
+  <tr>
+<td align="center"  colspan="3">
+  <a href="&#26597;&#30475;.html"><img src="../../../images/rcgl.jpg" width="700" height="400" border="0"></a></td>
+</tr>
+  
+</table>
+-->
+
+
+</body>
+</html>
