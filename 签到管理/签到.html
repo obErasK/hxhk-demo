@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+<link href="../../../css/list.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style3 {color: #FFFFFF}
+-->
+</style>
+</head>
+<script>
+ function orgSelect() {
+     var url = "新建.html";
+     window.showModalDialog(url,self,"dialogHeight:480px; dialogWidth:900px");
+  }
+  function selectTag(showContent,selfObj){
+    // 操作标签
+	var tag = document.getElementById("myul").getElementsByTagName("li");
+	var taglength = tag.length;
+	for(i=0; i<taglength; i++){
+		tag[i].className = "noSelectTag";
+	}
+	selfObj.className = "onSelectTag";
+	// 操作内容
+	for(i=0; i<taglength;i++){
+	    j=document.getElementById("tagContent"+i)
+		j.style.display = "none";
+	}
+	document.getElementById(showContent).style.display = "block";
+	
+	
+}
+</script>
+<style>
+     .onSelectTag{
+	     float:left; background-color:#4878dc; width:100px; text-align:center; cursor:pointer;
+	 }
+	 .noSelectTag{
+	     float:left; background-color:#b9cefb; width:100px; text-align:center;margin-left:3px;cursor:pointer;
+	 }
+    .define{
+	     background-image:url(../../../images/queding.png);
+	}
+	.cancle{
+	     background-image:url(../../../images/quxiao.png);
+	}
+.style2 {
+	font-size: 15px;
+	color: #FFFFFF;
+}
+ .onSelectTag1{
+	     background-color:#4878dc; text-align:center; cursor:pointer;
+	 }
+</style>
+<body>
+<div class="top_nav1">
+         <ul id="myul">
+		    <li class="noSelectTag" ><a href="&#31614;&#21040;&#31649;&#29702;.html">签到记录</a></li>
+			<li class="noSelectTag"><a href="&#26410;&#31614;&#21040;&#31649;&#29702;.html">未签到记录</a></li>
+			<li class="onSelectTag style3">签 到</li>
+		</ul>
+		
+</div>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#98A5D4">
+  <tr>
+<td align="center"  colspan="3">  <img src="../../../images/qd.jpg" width="550" height="644" border="0"></td>
+ <div id="qd" style="position:absolute; left:15%; top:85%"><a href="&#31614;&#21040;1.html"><img src="../../../images/qd1.jpg"></a></div>
+</tr>
+  
+</table>
+
+
+
+</body>
+</html>
