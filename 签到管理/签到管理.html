@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+<link href="../../../css/list.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style3 {color: #FFFFFF}
+-->
+</style>
+</head>
+<script>
+ function orgSelect() {
+     var url = "新建.html";
+     window.showModalDialog(url,self,"dialogHeight:480px; dialogWidth:900px");
+  }
+  function selectTag(showContent,selfObj){
+    // 操作标签
+	var tag = document.getElementById("myul").getElementsByTagName("li");
+	var taglength = tag.length;
+	for(i=0; i<taglength; i++){
+		tag[i].className = "noSelectTag";
+	}
+	selfObj.className = "onSelectTag";
+	// 操作内容
+	for(i=0; i<taglength;i++){
+	    j=document.getElementById("tagContent"+i)
+		j.style.display = "none";
+	}
+	document.getElementById(showContent).style.display = "block";
+	
+	
+}
+</script>
+<style>
+     .onSelectTag{
+	     float:left; background-color:#4878dc; width:100px; text-align:center; cursor:pointer;
+	 }
+	 .noSelectTag{
+	     float:left; background-color:#b9cefb; width:100px; text-align:center;margin-left:3px;cursor:pointer;
+	 }
+    .define{
+	     background-image:url(../../../images/queding.png);
+	}
+	.cancle{
+	     background-image:url(../../../images/quxiao.png);
+	}
+.style2 {
+	font-size: 15px;
+	color: #FFFFFF;
+}
+ .onSelectTag1{
+	     background-color:#4878dc; text-align:center; cursor:pointer;
+	 }
+</style>
+<body>
+<div class="top_nav1">
+        <ul id="myul">
+		    <li class="onSelectTag style3" >签到记录</li>
+			<li class="noSelectTag"><a href="&#26410;&#31614;&#21040;&#31649;&#29702;.html">未签到记录</a></li>
+			
+		</ul>
+		<ul>
+		     <li style=" float:left; margin-left:10px">
+			   姓名：<input name="mc" type="text" value="安娜" size="10" />
+		       时间：<input name="goTime" type="text" value="2014-06" size="10" />
+		       <input name="button" type="submit"  value="查询">
+		     </li>
+			
+		</ul>
+</div>
+
+<table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#98A5D4">
+   <tr class="onSelectTag1">
+      
+      <td width="30" align="center" ><span class="style2">序号</span></td>
+      <td width="30"  align="center" ><span class="style2">日期</span></td>
+
+      <td width="25%"  align="center" ><span class="style2">上班签到</span></td>
+      <td width="35%"  align="center" ><span class="style2">拜访签到</span></td>
+      <td width="18%"  align="center" ><span class="style2">备注说明</span></td>
+   </tr>
+	
+    <tr bgcolor="#FFFFFF">
+      <td>1</td>
+      <td>1日</td>
+
+      <td width="17%">
+	  	<table cellspacing="1" bgcolor="#98A5D4" align="center" cellpadding="3" width="100%">
+			<tr bgcolor="#FFFFFF">
+				<td align="center">上班时间</td>
+				<td align="center">下班时间</td>
+			</tr>
+			<tr bgcolor="#FFFFFF">
+				<td align="center">8:30</td>
+				<td align="center">17:30</td>
+			</tr>
+		</table>
+	  </td>
+      <td width="35%">
+	  <table cellspacing="1" bgcolor="#98A5D4"cellpadding="3" width="100%">
+	  	<tr bgcolor="#FFFFFF">
+			<td align="center">时间</td>
+			<td align="center">事由</td>
+		</tr>
+		<tr bgcolor="#FFFFFF">
+			<td align="center">11:00</td>
+			<td align="center">客户拜访</td>
+		</tr>
+		<tr bgcolor="#FFFFFF">
+			<td align="center">14:00</td>
+			<td align="center">公务</td>
+		</tr>
+	  </table>
+	  </td>
+      <td>&nbsp;</td>
+    </tr>
+	 <tr bgcolor="#FFFFFF">
+      <td >2</td>
+      <td>2日</td>
+
+      <td width="17%">
+	  	<table cellspacing="1" bgcolor="#98A5D4" align="center" cellpadding="3" width="100%">
+			<tr bgcolor="#FFFFFF">
+				<td align="center">上班时间</td>
+				<td align="center">下班时间</td>
+			</tr>
+			<tr bgcolor="#FFFFFF">
+				<td align="center">8:00</td>
+				<td align="center">19:00</td>
+			</tr>
+		</table>
+	  </td>
+      <td>
+	  <table cellspacing="1" bgcolor="#98A5D4" align="center" cellpadding="3" width="100%">
+	  	<tr bgcolor="#FFFFFF">
+			<td align="center">时间</td>
+			<td align="center">事由</td>
+		</tr>
+		<tr bgcolor="#FFFFFF">
+			<td align="center">10:00</td>
+			<td align="center">公司开会</td>
+		</tr>
+
+	  </table>
+	  </td>
+      <td>拜访中国电信客户</td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+      <td>3</td>
+      <td>3日</td>
+
+      <td width="17%">
+	  	<table cellspacing="1" bgcolor="#98A5D4" align="center" cellpadding="3" width="100%">
+			<tr bgcolor="#FFFFFF">
+				<td align="center">上班时间</td>
+				<td align="center">下班时间</td>
+			</tr>
+			<tr bgcolor="#FFFFFF">
+				<td align="center">7:30</td>
+				<td align="center">18:50</td>
+			</tr>
+		</table>
+	  </td>
+      <td>
+	  <table cellspacing="1" bgcolor="#98A5D4" align="center" cellpadding="3" width="100%">
+	  	<tr bgcolor="#FFFFFF">
+			<td align="center">时间</td>
+			<td align="center">事由</td>
+		</tr>
+		<tr bgcolor="#FFFFFF">
+			<td align="center">9:00</td>
+			<td align="center">客户拜访</td>
+		</tr>
+		<tr bgcolor="#FFFFFF">
+			<td align="center">15:00</td>
+			<td align="center">公务</td>
+		</tr>
+	  </table>
+	  </td>
+      <td>&nbsp;</td>
+    </tr>
+	<tr bgcolor="#FFFFFF">
+      <td>4</td>
+      <td>4日</td>
+
+      <td width="17%">
+	  	<table cellspacing="1" bgcolor="#98A5D4" align="center" cellpadding="3" width="100%">
+			<tr bgcolor="#FFFFFF">
+				<td align="center">上班时间</td>
+				<td align="center">下班时间</td>
+			</tr>
+			<tr bgcolor="#FFFFFF">
+				<td align="center">8:30</td>
+				<td align="center">17:30</td>
+			</tr>
+		</table>
+	  </td>
+      <td>
+	  <table cellspacing="1" bgcolor="#98A5D4" align="center" cellpadding="3" width="100%">
+	  	<tr bgcolor="#FFFFFF">
+			<td align="center">时间</td>
+			<td align="center">事由</td>
+		</tr>
+		<tr bgcolor="#FFFFFF">
+			<td align="center">11:00</td>
+			<td align="center">客户拜访</td>
+		</tr>
+		<tr bgcolor="#FFFFFF">
+			<td align="center">14:00</td>
+			<td align="center">公务</td>
+		</tr>
+	  </table>
+	  </td>
+      <td>拜访中国电信客户</td>
+	</tr>
+	<tr bgcolor="#FFFFFF">
+      <td>5</td>
+      <td>5日</td>
+
+      <td width="17%">
+	  	<table cellspacing="1" bgcolor="#98A5D4" align="center" cellpadding="3" width="100%">
+			<tr bgcolor="#FFFFFF">
+				<td align="center">上班时间</td>
+				<td align="center">下班时间</td>
+			</tr>
+			<tr bgcolor="#FFFFFF">
+				<td align="center">8:30</td>
+				<td align="center">17:30</td>
+			</tr>
+		</table>
+	  </td>
+      <td>
+	  <table cellspacing="1" bgcolor="#98A5D4" align="center" cellpadding="3" width="100%">
+	  	<tr bgcolor="#FFFFFF">
+			<td align="center">时间</td>
+			<td align="center">事由</td>
+		</tr>
+		<tr bgcolor="#FFFFFF">
+			<td align="center">11:00</td>
+			<td align="center">客户拜访</td>
+		</tr>
+		<tr bgcolor="#FFFFFF">
+			<td align="center">14:00</td>
+			<td align="center">公务</td>
+		</tr>
+	  </table>
+	  </td>
+      <td>&nbsp;</td>
+	</tr>
+    <tr bgcolor="#FFFFFF">
+      <td>6</td>
+      <td>6日</td>
+
+      <td width="17%">
+	  	<table cellspacing="1" bgcolor="#98A5D4" align="center" cellpadding="3" width="100%">
+			<tr bgcolor="#FFFFFF">
+				<td align="center">上班时间</td>
+				<td align="center">下班时间</td>
+			</tr>
+			<tr bgcolor="#FFFFFF">
+				<td align="center">8:30</td>
+				<td align="center">17:30</td>
+			</tr>
+		</table>
+	  </td>
+      <td>
+	  <table cellspacing="1" bgcolor="#98A5D4" align="center" cellpadding="3" width="100%">
+	  	<tr bgcolor="#FFFFFF">
+			<td align="center">时间</td>
+			<td align="center">事由</td>
+		</tr>
+		<tr bgcolor="#FFFFFF">
+			<td align="center">11:00</td>
+			<td align="center">客户拜访</td>
+		</tr>
+		<tr bgcolor="#FFFFFF">
+			<td align="center">14:00</td>
+			<td align="center">公务</td>
+		</tr>
+	  </table>
+	  </td>
+      <td>&nbsp;</td>
+    </tr>
+	 <tr bgcolor="#FFFFFF">
+      <td>7</td>
+
+      <td>产品部</td>
+      <td width="17%">
+	  	<table cellspacing="1" bgcolor="#98A5D4" align="center" cellpadding="3" width="100%">
+			<tr bgcolor="#FFFFFF">
+				<td align="center">上班时间</td>
+				<td align="center">下班时间</td>
+			</tr>
+			<tr bgcolor="#FFFFFF">
+				<td align="center">8:30</td>
+				<td align="center">17:30</td>
+			</tr>
+		</table>
+	  </td>
+      <td>
+	  <table cellspacing="1" bgcolor="#98A5D4" align="center" cellpadding="3" width="100%">
+	  	<tr bgcolor="#FFFFFF">
+			<td align="center">时间</td>
+			<td align="center">事由</td>
+		</tr>
+		<tr bgcolor="#FFFFFF">
+			<td align="center">11:00</td>
+			<td align="center">客户拜访</td>
+		</tr>
+		<tr bgcolor="#FFFFFF">
+			<td align="center">14:00</td>
+			<td align="center">公务</td>
+		</tr>
+	  </table>
+	  </td>
+      <td>&nbsp;</td>
+    </tr>
+	<tr>
+      <td colspan="7" class="td_foot"><strong>应签到人数：100人</strong>        [ 共有9条记录 分1页显示，当前显示第1页] <a href="#">首页</a> <a href="#">上一页</a> <a href="#">下一页</a> <a href="#">末页</a><span class="page_top_on">
+<input name="textfield22223" type="text" class="input_title" value="" size="4" />
+        <input type="submit" name="Submit32" value="转到">
+      </span></td>
+    </tr>
+</table>
+
+
+
+</body>
+</html>
