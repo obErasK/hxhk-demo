@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+<link href="../../../css/list.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+ function orgSelect() {
+     var url = "新建.html";
+     window.showModalDialog(url,self,"dialogHeight:480px; dialogWidth:900px");
+  }
+  function selectTag(showContent,selfObj){
+    // 操作标签
+	var tag = document.getElementById("myul").getElementsByTagName("li");
+	var taglength = tag.length;
+	for(i=0; i<taglength; i++){
+		tag[i].className = "noSelectTag";
+	}
+	selfObj.className = "onSelectTag";
+	// 操作内容
+	for(i=0; i<taglength;i++){
+	    j=document.getElementById("tagContent"+i)
+		j.style.display = "none";
+	}
+	document.getElementById(showContent).style.display = "block";
+	
+	
+}
+function selectReason(obj){
+    for(i=0; i<3; i++){
+	    var id="reason"+i;
+		document.getElementById(id).className = "noSelectReason";
+	}
+	 obj.className = "onSelectReason";
+	 document.getElementById("sy").value=obj.innerHTML;
+}
+</script>
+<style>
+     .onSelectTag{
+	     float:left; background-color:#4878dc; width:120px; text-align:center; cursor:pointer;
+	 }
+	 .noSelectTag{
+	     float:left; background-color:#b9cefb; width:120px; text-align:center;margin-left:3px;cursor:pointer;
+	 }
+   
+	.noSelectReason{
+	     float:left; width:60px;
+		 height:25px;
+		 text-align:center;
+		 line-height:25px;
+		 cursor:pointer;
+	}
+	.onSelectReason{
+	     float:left;
+		 width:60px;
+		 height:25px; 
+		 text-align:center;
+		 line-height:25px; 
+		 background-color:#00b7ee;
+		 cursor:pointer;
+	}
+	#imgUl li{
+	    float:left;
+		margin-left:5px;
+		margin-top:5px;
+		cursor:pointer;
+	}
+	#imgUl li img{
+	    float:left;
+		width:80px;
+		height:80px;
+	}
+</style>
+<body style="text-align:center ">
+    <img src="../../../myCollect/0011390009.jpg" style="width:100%; height:90% ">
+    <input type="button" value="返回" class="cancle" onClick="history.go(-1)" style=" margin-top:20px ">
+</body>
+</html>
