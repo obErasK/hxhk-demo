@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+<link href="../../../css/list.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+ function orgSelect() {
+     var url = "新建.html";
+     window.showModalDialog(url,self,"dialogHeight:480px; dialogWidth:900px");
+  }
+  function selectTag(showContent,selfObj){
+    // 操作标签
+	var tag = document.getElementById("myul").getElementsByTagName("li");
+	var taglength = tag.length;
+	for(i=0; i<taglength; i++){
+		tag[i].className = "noSelectTag";
+	}
+	selfObj.className = "onSelectTag";
+	// 操作内容
+	for(i=0; i<taglength;i++){
+	    j=document.getElementById("tagContent"+i)
+		j.style.display = "none";
+	}
+	document.getElementById(showContent).style.display = "block";
+	
+	
+}
+function selectReason(obj){
+    for(i=0; i<3; i++){
+	    var id="reason"+i;
+		document.getElementById(id).className = "noSelectReason";
+	}
+	 obj.className = "onSelectReason";
+	 document.getElementById("sy").value=obj.innerHTML;
+}
+function changeView(){
+    location.href="收藏_图片.html";
+}
+</script>
+<style>
+     .onSelectTag{
+	     float:left; background-color:#4878dc; width:120px; text-align:center; cursor:pointer;
+	 }
+	 .noSelectTag{
+	     float:left; background-color:#b9cefb; width:120px; text-align:center;margin-left:3px;cursor:pointer;
+	 }
+   
+	.noSelectReason{
+	     float:left;
+		 width:60px;
+		 height:25px;
+		 text-align:center;
+		 line-height:25px;
+		 cursor:pointer;
+	}
+	.onSelectReason{
+	     float:left;
+		 width:60px;
+		 height:25px; 
+		 text-align:center;
+		 line-height:25px; 
+		 background-color:#00b7ee;
+		 cursor:pointer;
+	}
+	#imgUl li{
+		margin-left:5px;
+		margin-top:5px;
+		cursor:pointer;
+	}
+	#mytable tr img{
+	    width:80px;
+		height:80px;
+	}
+	#imgUl li img{
+	    width:80px;
+		height:80px;
+	}
+</style>
+<body style=" height:100%; overflow:scroll; ">
+<div class="top_nav1">
+        <ul id="myul">
+		    <li class="onSelectTag">图片</li>
+			<a href="收藏_文件.html"><li class="noSelectTag">文档</li></a>
+			<a href="收藏_聊天记录.html"><li class="noSelectTag">消息</li></a>
+		</ul>
+       <ul>
+		     <li style=" float:left; margin-left:100px"><img src="../../../images/search1.png"></li>
+			 <li style=" float:left; margin-left:30px"><img src="../../../images/lajixiang.png"></li>
+		</ul>	
+</div>
+<!-- 图片-->
+<div id="tagContent0">
+        <div style=" float:left;text-align:left; font-size:16px"><input type="button" class="define" value="切换视图" onClick="changeView()"></div>
+        <br/><br/><br/>
+		<hr/>
+		<div style=" width:100% ;">
+		    <table id="mytable">
+			    <tr>
+				   <td><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />  </td>
+				   <td><a href="收藏_大图片.html">头像1</a></td>
+				<tr>
+			    <tr>
+				   <td><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />  </td>
+				   <td><a href="收藏_大图片.html">头像1</a></td>
+				<tr>
+				<tr>
+				   <td><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />  </td>
+				   <td><a href="收藏_大图片.html">头像1</a></td>
+				<tr>
+				<tr>
+				   <td><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />  </td>
+				   <td><a href="收藏_大图片.html">头像1</td>
+				<tr>
+				<tr>
+				   <td><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />  </td>
+				   <td><a href="收藏_大图片.html">头像1</a></td>
+				<tr>
+				<tr>
+				   <td><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />  </td>
+				   <td><a href="收藏_大图片.html">头像1</a></td>
+				<tr>
+				<tr>
+				   <td><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />  </td>
+				   <td><a href="收藏_大图片.html">头像1</a></td>
+				<tr>
+				<tr>
+				   <td><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />  </td>
+				   <td><a href="收藏_大图片.html">头像1</a></td>
+				<tr>
+			</table>
+	 </div>
+		
+</div>
+</body>
+</html>
