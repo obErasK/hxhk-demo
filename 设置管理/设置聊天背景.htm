@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<title>无标题文档</title>
+	<link href="../../../css/list.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+	 function orgSelect() {
+		 var url = "新建.html";
+		 window.showModalDialog(url,self,"dialogHeight:480px; dialogWidth:900px");
+	  }
+	  //
+	  function selectTag(showContent,selfObj){
+	   // 操作标签 
+		var tag = document.getElementById("myul").getElementsByTagName("li");
+		var taglength = tag.length;
+		for(i=0; i<taglength; i++){
+			tag[i].className = "noSelectTag";
+		}
+		selfObj.className = "onSelectTag";
+		// 操作内容
+		for(i=0; i<taglength;i++){
+			j=document.getElementById("tagContent"+i)
+			j.style.display = "none";
+		}
+		document.getElementById(showContent).style.display = "block";
+	}
+	//
+	//操作设置标签
+	function selectSetTag(showContent,selfObj){
+	   // 操作标签 
+		var tag = document.getElementById("mysetul").getElementsByTagName("li");
+		var taglength = tag.length;
+		for(i=0; i<taglength; i++){
+			tag[i].className = "noSelectSetTag";
+		}
+		selfObj.className = "onSelectSetTag";
+		// 操作内容
+		for(i=0; i<taglength;i++){
+			j=document.getElementById("tagContentSet"+i)
+			j.style.display = "none";
+		}
+		document.getElementById(showContent).style.display = "block";
+	}
+</script>
+<style>
+     .onSelectTag{
+	     float:left; background-color:#4878dc; width:120px; text-align:center; cursor:pointer;
+	 }
+	 .noSelectTag{
+	     float:left; background-color:#b9cefb; width:120px; text-align:center;margin-left:3px;cursor:pointer;
+	 }
+    .define{
+	     background-image:url(../../../images/queding.png);
+		 width:65px;
+		 height:35px;
+	}
+	.cancle{
+	     background-image:url(../../../images/quxiao.png);
+		 width:65px;
+		 height:35px;
+	}
+	.onSelectSetTag{
+	      background-color:#4878dc; width:120px; height:30px; text-align:center; cursor:pointer;
+	 }
+	 .noSelectSetTag{
+	      background-color:#b9cefb; width:120px; height:30px; text-align:center; margin-left:3px;cursor:pointer;
+	 }
+	 .style2 {
+	font-size: 15px;
+	color: #FFFFFF;
+	}
+	 .onSelectTag1{
+	     background-color:#4878dc; text-align:center; cursor:pointer;
+	 }
+</style>
+<body>
+	<div class="top_nav1">
+        <ul id="myul">
+		    <li class="onSelectTag">设置聊天背景</li>
+			<li class="noSelectTag"><a href="查找聊天记录.htm">查找聊天记录</a></li>
+			<li class="noSelectTag"><a href="清除聊天记录.html">清除聊天记录</a></li>
+			<li class="noSelectTag"><a href="修改密码.htm">修改密码</a></li>
+			<li class="noSelectTag"><a href="管理员配置.htm">管理员配置</a></li>
+		</ul>
+	</div>
+
+		<table>
+		<tr>
+			<td><img src="../../../icons/png/01.png" width="100" height="100"></td>
+			<td><img src="../../../icons/png/02.png" width="100" height="100"></td>
+			<td><img src="../../../icons/png/03.png" width="100" height="100"></td>
+			<td><img src="../../../icons/png/04.png" width="100" height="100"></td>
+			<td><img src="../../../icons/png/05.png" width="100" height="100"></td>
+			<td><img src="../../../icons/png/06.png" width="100" height="100"></td>
+		</tr>
+		<tr>
+			<td><img src="../../../icons/png/07.png" width="100" height="100"></td>
+			<td><img src="../../../icons/png/08.png" width="100" height="100"></td>
+			<td><img src="../../../icons/png/09.png" width="100" height="100"></td>
+			<td><img src="../../../icons/png/10.png" width="100" height="100"></td>
+			<td><img src="../../../icons/png/11.png" width="100" height="100"></td>
+			<td><img src="../../../icons/png/12.png" width="100" height="100"></td>
+		</tr>
+		<tr>
+			<td><img src="../../../icons/png/13.png" width="100" height="100"></td>
+			<td><img src="../../../icons/png/14.png" width="100" height="100"></td>
+			<td><img src="../../../icons/png/15.png" width="100" height="100"></td>
+			<td><img src="../../../icons/png/16.png" width="100" height="100"></td>
+			<td><img src="../../../icons/png/17.png" width="100" height="100"></td>
+			<td><img src="../../../icons/png/18.png" width="100" height="100"></td>
+		</tr>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr></tr>
+		<tr>
+			<td></td>
+		    <td colspan="2"><input type="file"></td>
+			<td colspan="2"><input type="submit" value="应用到所有场景"></td>
+		</tr>
+		</table>
+
+
+</body>
+</html>
