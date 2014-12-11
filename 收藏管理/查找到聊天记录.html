@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<title>无标题文档</title>
+	<link href="../../../css/list.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+	 function orgSelect() {
+		 var url = "新建.html";
+		 window.showModalDialog(url,self,"dialogHeight:480px; dialogWidth:900px");
+	  }
+	  //
+	  function selectTag(showContent,selfObj){
+	   // 操作标签 
+		var tag = document.getElementById("myul").getElementsByTagName("li");
+		var taglength = tag.length;
+		for(i=0; i<taglength; i++){
+			tag[i].className = "noSelectTag";
+		}
+		selfObj.className = "onSelectTag";
+		// 操作内容
+		for(i=0; i<taglength;i++){
+			j=document.getElementById("tagContent"+i)
+			j.style.display = "none";
+		}
+		document.getElementById(showContent).style.display = "block";
+	}
+	//
+	//操作设置标签
+	function selectSetTag(showContent,selfObj){
+	   // 操作标签 
+		var tag = document.getElementById("mysetul").getElementsByTagName("li");
+		var taglength = tag.length;
+		for(i=0; i<taglength; i++){
+			tag[i].className = "noSelectSetTag";
+		}
+		selfObj.className = "onSelectSetTag";
+		// 操作内容
+		for(i=0; i<taglength;i++){
+			j=document.getElementById("tagContentSet"+i)
+			j.style.display = "none";
+		}
+		document.getElementById(showContent).style.display = "block";
+	}
+</script>
+<style>
+     .onSelectTag{
+	     float:left; background-color:#4878dc; width:120px; text-align:center; cursor:pointer;
+	 }
+	 .noSelectTag{
+	     float:left; background-color:#b9cefb; width:120px; text-align:center;margin-left:3px;cursor:pointer;
+	 }
+    .define{
+	     background-image:url(../../../images/queding.png);
+		 width:65px;
+		 height:35px;
+	}
+	.cancle{
+	     background-image:url(../../../images/quxiao.png);
+		 width:65px;
+		 height:35px;
+	}
+	.onSelectSetTag{
+	      background-color:#4878dc; width:120px; height:30px; text-align:center; cursor:pointer;
+	 }
+	 .noSelectSetTag{
+	      background-color:#b9cefb; width:120px; height:30px; text-align:center; margin-left:3px;cursor:pointer;
+	 }
+	 .style2 {
+	font-size: 15px;
+	color: #FFFFFF;
+	}
+	 .onSelectTag1{
+	     background-color:#4878dc; text-align:center; cursor:pointer;
+	 }
+</style>
+<body>
+	
+
+		<table align="center">
+		<tr>
+			<td colspan="4"><img src="../../../images/czltjl.png"></td>
+		</tr>
+		<tr align="center">
+			<td><a href="收藏_聊天记录.html"><input type="button"  class="cancle" value=""></a></td>
+		</tr>
+		</table>
+
+</body>
+</html>
