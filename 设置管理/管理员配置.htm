@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<title>无标题文档</title>
+	<link href="../../../css/list.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+	 function orgSelect() {
+		 var url = "新建.html";
+		 window.showModalDialog(url,self,"dialogHeight:480px; dialogWidth:900px");
+	  }
+	  //
+	  function selectTag(showContent,selfObj){
+	   // 操作标签 
+		var tag = document.getElementById("myul").getElementsByTagName("li");
+		var taglength = tag.length;
+		for(i=0; i<taglength; i++){
+			tag[i].className = "noSelectTag";
+		}
+		selfObj.className = "onSelectTag";
+		// 操作内容
+		for(i=0; i<taglength;i++){
+			j=document.getElementById("tagContent"+i)
+			j.style.display = "none";
+		}
+		document.getElementById(showContent).style.display = "block";
+	}
+	//
+	//操作设置标签
+	function selectSetTag(showContent,selfObj){
+	   // 操作标签 
+		var tag = document.getElementById("mysetul").getElementsByTagName("li");
+		var taglength = tag.length;
+		for(i=0; i<taglength; i++){
+			tag[i].className = "noSelectSetTag";
+		}
+		selfObj.className = "onSelectSetTag";
+		// 操作内容
+		for(i=0; i<taglength;i++){
+			j=document.getElementById("tagContentSet"+i)
+			j.style.display = "none";
+		}
+		document.getElementById(showContent).style.display = "block";
+	}
+</script>
+<style>
+     .onSelectTag{
+	     float:left; background-color:#4878dc; width:120px; text-align:center; cursor:pointer;
+	 }
+	 .noSelectTag{
+	     float:left; background-color:#b9cefb; width:120px; text-align:center;margin-left:3px;cursor:pointer;
+	 }
+    .define{
+	     background-image:url(../../../images/queding.png);
+		 width:65px;
+		 height:35px;
+	}
+	.cancle{
+	     background-image:url(../../../images/quxiao.png);
+		 width:65px;
+		 height:35px;
+	}
+	.onSelectSetTag{
+	      background-color:#4878dc; width:120px; height:30px; text-align:center; cursor:pointer;
+	 }
+	 .noSelectSetTag{
+	      background-color:#b9cefb; width:120px; height:30px; text-align:center; margin-left:3px;cursor:pointer;
+	 }
+	 .style2 {
+	font-size: 15px;
+	color: #FFFFFF;
+	}
+	 .onSelectTag1{
+	     background-color:#4878dc; text-align:center; cursor:pointer;
+	 }
+</style>
+<body>
+	<div class="top_nav1">
+        <ul id="myul">
+		    <li class="noSelectTag"><a href="设置聊天背景.htm">设置聊天背景</a></li>
+			<li class="noSelectTag"><a href="查找聊天记录.htm">查找聊天记录</a></li>
+			<li class="noSelectTag"><a href="清除聊天记录.html">清除聊天记录</a></li>
+			<li class="noSelectTag"><a href="修改密码.htm">修改密码</a></li>
+			<li class="onSelectTag">管理员配置</li>
+		</ul>
+	</div>
+	
+		<div class="top_nav1" style="float:left ">
+        <ul id="mysetul">
+		    <li class="onSelectSetTag">部门管理</li>
+			<li class="noSelectSetTag"><a href="用户管理.html">用户管理</a></li>
+			<li class="noSelectSetTag"><a href="角色管理.html">角色管理</a></li>
+			<li class="noSelectSetTag"><a href="费用类别管理.html">费用类别管理</a></li>
+			<li class="noSelectSetTag"><a href="日志管理.html">日志管理</a></li>
+		</ul>
+		</div>
+			<div  id="tagContentSet0" style="float:left ">
+				<table width="60%">
+					<tr>
+						<td><img src="../../../images/search1.png"></td>
+						<td><a href="新增部门.html"><input type="button" value="新增"></a></td>
+						
+						<td><input type="button" value="删除"></td>
+						<td><input type="button" value="批量导入"></td>
+					</tr>
+					<tr>
+						<td colspan="5">
+							<table width="480px" height="200px" border="1px" cellspacing="0" style="border-collapse:collapse ">
+								<tr class="onSelectTag1" align="center" width="100%">
+									<td width="34px" align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />     </td>
+									<td class="style2" >名称</td>
+									<td class="style2">上级部门</td>
+									<td class="style2">修改</td>
+								</tr>
+								<tr>
+									<td width="34px" align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />     </td>
+									<td align="center">产品部</td>
+									<td align="center">无</td>
+									<td align="center"><a href="修改部门.html"><input type="button" value="修改"></a></td>
+								</tr>
+								<tr>
+									<td width="34px" align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />     </td>
+									<td align="center">开发部</td>
+									<td align="center">无</td>
+									<td align="center"><a href="修改部门.html"><input type="button" value="修改"></a></td>
+								</tr>
+								<tr>
+									<td width="34px" align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />     </td>
+									<td align="center">项目部</td>
+									<td align="center">无</td>
+									<td align="center"><a href="修改部门.html"><input type="button" value="修改"></a></td>
+								</tr>
+								<tr>
+									<td width="34px" align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />     </td>
+									<td align="center">市场部</td>
+									<td align="center">项目部</td>
+									<td align="center"><a href="修改部门.html"><input type="button" value="修改"></a></td>
+								</tr>
+								<tr>
+									<td width="34px" align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />     </td>
+									<td align="center">产品部</td>
+									<td align="center">项目部</td>
+									<td align="center"><a href="修改部门.html"><input type="button" value="修改"></a></td>
+								</tr>
+								<tr>
+									<td width="34px" align="center" ><input type="checkbox" name="id[]" value="1" onclick="javascript:chkRow(this);" />     </td>
+									<td align="center">开发部</td>
+									<td align="center">无</td>
+									<td align="center"><a href="修改部门.html"><input type="button" value="修改"></a></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="5" align="right"> 1/3 页 
+						<a href="#">首页</a> <a href="#">上一页</a> <a href="#">下一页</a> <a href="#">末页</a><span class="page_top_on">
+							<input name="textfield22223" type="text" class="input_title" value="" size="4" >
+							<input type="submit" name="Submit32" value="转到">
+						 </span></td>
+					</tr>
+				</table>
+			</div>
+			
+
+</body>
+</html>
