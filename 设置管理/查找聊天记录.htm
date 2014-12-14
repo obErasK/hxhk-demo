@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+	<title>无标题文档</title>
+	<link href="../../../css/list.css" rel="stylesheet" type="text/css" />
+</head>
+<script>
+	 function orgSelect() {
+		 var url = "新建.html";
+		 window.showModalDialog(url,self,"dialogHeight:480px; dialogWidth:900px");
+	  }
+	  //
+	  function selectTag(showContent,selfObj){
+	   // 操作标签 
+		var tag = document.getElementById("myul").getElementsByTagName("li");
+		var taglength = tag.length;
+		for(i=0; i<taglength; i++){
+			tag[i].className = "noSelectTag";
+		}
+		selfObj.className = "onSelectTag";
+		// 操作内容
+		for(i=0; i<taglength;i++){
+			j=document.getElementById("tagContent"+i)
+			j.style.display = "none";
+		}
+		document.getElementById(showContent).style.display = "block";
+	}
+	//
+	//操作设置标签
+	function selectSetTag(showContent,selfObj){
+	   // 操作标签 
+		var tag = document.getElementById("mysetul").getElementsByTagName("li");
+		var taglength = tag.length;
+		for(i=0; i<taglength; i++){
+			tag[i].className = "noSelectSetTag";
+		}
+		selfObj.className = "onSelectSetTag";
+		// 操作内容
+		for(i=0; i<taglength;i++){
+			j=document.getElementById("tagContentSet"+i)
+			j.style.display = "none";
+		}
+		document.getElementById(showContent).style.display = "block";
+	}
+</script>
+<style>
+     .onSelectTag{
+	     float:left; background-color:#4878dc; width:120px; text-align:center; cursor:pointer;
+	 }
+	 .noSelectTag{
+	     float:left; background-color:#b9cefb; width:120px; text-align:center;margin-left:3px;cursor:pointer;
+	 }
+    .define{
+	     background-image:url(../../../images/queding.png);
+		 width:65px;
+		 height:35px;
+	}
+	.cancle{
+	     background-image:url(../../../images/quxiao.png);
+		 width:65px;
+		 height:35px;
+	}
+	.onSelectSetTag{
+	      background-color:#4878dc; width:120px; height:30px; text-align:center; cursor:pointer;
+	 }
+	 .noSelectSetTag{
+	      background-color:#b9cefb; width:120px; height:30px; text-align:center; margin-left:3px;cursor:pointer;
+	 }
+	 .style2 {
+	font-size: 15px;
+	color: #FFFFFF;
+	}
+	 .onSelectTag1{
+	     background-color:#4878dc; text-align:center; cursor:pointer;
+	 }
+</style>
+<body>
+	<div class="top_nav1">
+        <ul id="myul">
+		    <li class="noSelectTag"><a href="设置聊天背景.htm">设置聊天背景</a></li>
+			<li class="onSelectTag">查找聊天记录</li>
+			<li class="noSelectTag"><a href="清除聊天记录.html">清除聊天记录</a></li>
+			<li class="noSelectTag"><a href="修改密码.htm">修改密码</a></li>
+			<li class="noSelectTag"><a href="管理员配置.htm">管理员配置</a></li>
+		</ul>
+	</div>
+
+		<table align="center">
+		<tr>
+			<td>查找内容：</td>
+			<td><input type="text" size="60"></td>
+			<td><select>
+			<option value="查找文本">查找文本</option>
+			<option value="查找图片">查找图片</option>
+			<option value="查找文件">查找文件</option>
+			</select></td>
+			
+		</tr>
+		<tr>
+			<td>查找时段：</td>
+			<td><input type="text" value="2014-06-07"><img style=" margin-bottom:-8px;width:25px; height:25px " src="../../../images/tianjiatubiao.png">&nbsp;&nbsp;-&nbsp;&nbsp;<input type="text" value="2014-06-17"><img style=" margin-bottom:-8px;width:25px; height:25px " src="../../../images/tianjiatubiao.png"></td>
+			<td><a href="查找到聊天记录.html"><input type="button" value="确定"></a></td>
+		</tr>
+		<tr>
+			<td colspan="4"><img src="../../../images/ltjl2.png"></td>
+		</tr>
+		</table>
+
+</body>
+</html>
